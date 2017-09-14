@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="react," />
 
 
 
@@ -94,17 +94,18 @@
 
 
 
-<meta name="description" content="如果是加点击事件clickhander(){}">
+<meta name="description" content="react的组件思想页面的信息是由组件组成，使用组件搭建页面，便于后期维护与使用 index.js的组成 引入两位带头大哥 react和react-dom  1import React from &apos;react&apos;  负责控制页面内容  1import ReactDom from &apos;react-dom&apos;  引入App组件   1import App from &apos;./App&apos;  引入样式  1impor">
+<meta name="keywords" content="react">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react的进一步学习">
 <meta property="og:url" content="http://https://zhanglin6427.github.io/2017/09/14/react的进一步学习/index.html">
 <meta property="og:site_name" content="张琳的总结">
-<meta property="og:description" content="如果是加点击事件clickhander(){}">
+<meta property="og:description" content="react的组件思想页面的信息是由组件组成，使用组件搭建页面，便于后期维护与使用 index.js的组成 引入两位带头大哥 react和react-dom  1import React from &apos;react&apos;  负责控制页面内容  1import ReactDom from &apos;react-dom&apos;  引入App组件   1import App from &apos;./App&apos;  引入样式  1impor">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-14T02:06:42.832Z">
+<meta property="og:updated_time" content="2017-09-14T09:31:04.685Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react的进一步学习">
-<meta name="twitter:description" content="如果是加点击事件clickhander(){}">
+<meta name="twitter:description" content="react的组件思想页面的信息是由组件组成，使用组件搭建页面，便于后期维护与使用 index.js的组成 引入两位带头大哥 react和react-dom  1import React from &apos;react&apos;  负责控制页面内容  1import ReactDom from &apos;react-dom&apos;  引入App组件   1import App from &apos;./App&apos;  引入样式  1impor">
 
 
 
@@ -329,8 +330,30 @@
       
 
       
-        <p>如果是加点击事件<br>clickhander(){}</p>
-<button onclick="{this.clickhander}"></button>
+        <h2 id="react的组件思想"><a href="#react的组件思想" class="headerlink" title="react的组件思想"></a>react的组件思想</h2><p>页面的信息是由组件组成，使用组件搭建页面，便于后期维护与使用</p>
+<h3 id="index-js的组成"><a href="#index-js的组成" class="headerlink" title="index.js的组成"></a>index.js的组成</h3><ol>
+<li>引入两位带头大哥 react和react-dom</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import React from <span class="string">'react'</span></div></pre></td></tr></table></figure>
+<ol>
+<li>负责控制页面内容</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import ReactDom from <span class="string">'react-dom'</span></div></pre></td></tr></table></figure>
+<ol>
+<li>引入App组件 </li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import App from <span class="string">'./App'</span></div></pre></td></tr></table></figure>
+<ol>
+<li>引入样式</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import <span class="string">'bootstrap/dist/css/bootstrap.min.css'</span></div></pre></td></tr></table></figure>
+<ol>
+<li>ReactDom负责控制页面的内容 但是使用ReactDom 必须依赖React第一个参数 是渲染的元素(必须是闭合标签)  第二个参数是渲染的位置</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ReactDom.render(&lt;App /&gt;,document.getElementById(<span class="string">'root'</span>))</div></pre></td></tr></table></figure>
+<h3 id="App-js"><a href="#App-js" class="headerlink" title="App.js"></a>App.js</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">import React,&#123;Component&#125; from <span class="string">'react'</span></div><div class="line">import Sub from <span class="string">'./Sub'</span></div><div class="line"><span class="built_in">export</span> default class App extends Component&#123;</div><div class="line">	<span class="function"><span class="title">constructor</span></span>()&#123;</div><div class="line">		super()</div><div class="line">		// 所有的初始化的属性都会存放在state</div><div class="line">		this.state = &#123;</div><div class="line">			count:0	</div><div class="line">		&#125;</div><div class="line">		// 初始化事件 flow语法  优雅</div><div class="line">		this.addHandler = this.addHandler.bind(this);</div><div class="line">	&#125;</div><div class="line">	// 自定义的点击事件</div><div class="line">	<span class="function"><span class="title">addHandler</span></span>()&#123;</div><div class="line">		// 注意在react中 我们一定要保证this指向 指向与当前的组件</div><div class="line">		this.setState(&#123;</div><div class="line">			count:++this.state.count</div><div class="line">		&#125;)</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="title">render</span></span>()&#123;</div><div class="line">		// 在react中 js中所有的事件的都可以使用</div><div class="line">		// &#123;&#125; 在任何地方都能插值</div><div class="line">		// react中 父子关系 是非常重要 这个东西 能解决我们页面处理所有的逻辑</div><div class="line">		<span class="built_in">return</span> (</div><div class="line">			&lt;div className = <span class="string">'app'</span>&gt;</div><div class="line">				&lt;h2&gt;这是我们的app组件&#123;this.number(<span class="string">'2'</span>)&#125;&lt;/h2&gt;</div><div class="line">				&lt;p&gt;&#123;this.state.count&#125;&lt;/p&gt;</div><div class="line">				&lt;button onClick=&#123;this.addHandler&#125; className=<span class="string">'btn btn-info'</span>&gt;+1&lt;/button&gt;</div><div class="line">//				子集模块的引入</div><div class="line">				&lt;Sub menu = &#123;this.state.menu&#125;&gt;&lt;/Sub&gt;</div><div class="line">			&lt;/div&gt;</div><div class="line">			)</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>###sub.js的引入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">import React,&#123;Component&#125; from <span class="string">'react'</span></div><div class="line"><span class="built_in">export</span> default class Sub extends Component&#123;</div><div class="line">//react提供了一个props属性 这个属性通常是执行于父级往子级去传值</div><div class="line">	constructor(props)&#123;</div><div class="line">		super(props)</div><div class="line">		// react 中 有个概念  数据流 所有的数据都是自上向下  从父往子</div><div class="line">		this.state = &#123;</div><div class="line">			menu:this.props.menu</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="title">addOneMenu</span></span>()&#123;</div><div class="line">		var array  = this.props.menu;</div><div class="line">		array.push(<span class="string">'辣子鸡丁'</span>);</div><div class="line">		this.setState(&#123;</div><div class="line">			menu: array</div><div class="line">		&#125;)</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="title">render</span></span>()&#123;</div><div class="line">		var arr = []</div><div class="line">		this.state.menu.forEach((ele,index)=&gt;&#123;</div><div class="line">			arr.push(&lt;li key=&#123;index&#125;&gt;&#123;ele&#125;&lt;/li&gt;)</div><div class="line">		&#125;)</div><div class="line">		<span class="built_in">return</span> (</div><div class="line">			&lt;div className=<span class="string">"sub"</span>&gt;</div><div class="line">				&lt;ul&gt;</div><div class="line">					&#123;arr&#125;</div><div class="line">				&lt;/ul&gt;</div><div class="line">				&lt;br/&gt;</div><div class="line">				&lt;button onClick=&#123;this.addOneMenu.bind(this)&#125;&gt;增加&lt;/button&gt;</div><div class="line">			&lt;/div&gt;</div><div class="line">			)</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -344,6 +367,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/react/" rel="tag"># react</a>
+          
+        </div>
       
 
       
@@ -414,8 +443,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -439,6 +477,15 @@
           
 
           
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
 
         </nav>
 
@@ -459,6 +506,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#react的组件思想"><span class="nav-number">1.</span> <span class="nav-text">react的组件思想</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#index-js的组成"><span class="nav-number">1.1.</span> <span class="nav-text">index.js的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#App-js"><span class="nav-number">1.2.</span> <span class="nav-text">App.js</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
