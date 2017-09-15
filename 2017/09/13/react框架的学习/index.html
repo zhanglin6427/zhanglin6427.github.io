@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="react," />
 
 
 
@@ -95,13 +95,14 @@
 
 
 <meta name="description" content="react的学习react的起源React 起源于 Facebook 的内部项目，因为该公司对市场上所有 JavaScript MVC 框架，都不满意，就决定自己写一套，用来架设Instagram 的网站。 react工具的意义 Factbook——后台硬 Virtual-dom——性能高     React Native——一次书写，全端可用前置概念   一个核心思想——组件化 两位带头大哥——">
+<meta name="keywords" content="react">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react框架的学习">
 <meta property="og:url" content="http://https://zhanglin6427.github.io/2017/09/13/react框架的学习/index.html">
 <meta property="og:site_name" content="张琳的总结">
 <meta property="og:description" content="react的学习react的起源React 起源于 Facebook 的内部项目，因为该公司对市场上所有 JavaScript MVC 框架，都不满意，就决定自己写一套，用来架设Instagram 的网站。 react工具的意义 Factbook——后台硬 Virtual-dom——性能高     React Native——一次书写，全端可用前置概念   一个核心思想——组件化 两位带头大哥——">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-15T11:30:31.510Z">
+<meta property="og:updated_time" content="2017-09-15T11:47:33.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react框架的学习">
 <meta name="twitter:description" content="react的学习react的起源React 起源于 Facebook 的内部项目，因为该公司对市场上所有 JavaScript MVC 框架，都不满意，就决定自己写一套，用来架设Instagram 的网站。 react工具的意义 Factbook——后台硬 Virtual-dom——性能高     React Native——一次书写，全端可用前置概念   一个核心思想——组件化 两位带头大哥——">
@@ -353,7 +354,8 @@
 <h3 id="本地搭建React的开发运行环"><a href="#本地搭建React的开发运行环" class="headerlink" title="本地搭建React的开发运行环"></a>本地搭建React的开发运行环</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import React from <span class="string">'react'</span>;</div><div class="line">import ReactDOM from <span class="string">'react-dom'</span>;</div></pre></td></tr></table></figure>
 <h3 id="组件添加构造函数并初始化-state"><a href="#组件添加构造函数并初始化-state" class="headerlink" title="组件添加构造函数并初始化 state"></a>组件添加构造函数并初始化 state</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">//通过 &lt;Square /&gt; 这样的标签可以在 React 当中调用整个 Square 组件</div><div class="line">    class Square extends React.Component &#123;</div><div class="line">        <span class="function"><span class="title">constructor</span></span>() &#123;</div><div class="line">    //在使用 JavaScript classes 时，你必须调用 super(); 方法才能在继承父类的子类中正确获取到类型的 this 。</div><div class="line">            super();</div><div class="line">    //在 React 组件的构造方法 constructor 当中，你可以通过 this.state 为该组件设置自身的状态数据。</div><div class="line">            this.state = &#123;</div><div class="line">                value: null,</div><div class="line">            &#125;;</div><div class="line">        &#125;</div><div class="line">        <span class="function"><span class="title">render</span></span>() &#123;</div><div class="line">            <span class="built_in">return</span> (</div><div class="line">    //使用箭头函数是确保this的正确指向</div><div class="line">                &lt;button className=<span class="string">"square"</span> onClick=&#123;() =&gt; alert(<span class="string">'click'</span>)&#125;&gt;</div><div class="line">    //在react中 修改state 不能直接修改 必须通过调用this.setState()</div><div class="line">                &#123;this.props.value&#125;</div><div class="line">                &lt;/button&gt;</div><div class="line">            );</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <p>从棋盘父组件 Board 接受数据，并且当自己被点击时通知触发父组件改变状态数据，我们称这类的组件为 <strong>受控组件</strong>。</p>
-<p>函数定义组件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Square(props) &#123;</div><div class="line">  <span class="built_in">return</span> (</div><div class="line">    &lt;button className=<span class="string">"square"</span> onClick=&#123;props.onClick&#125;&gt;</div><div class="line">      &#123;props.value&#125;</div><div class="line">    &lt;/button&gt;</div><div class="line">  );</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>函数定义组件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Square(props) &#123;</div><div class="line">  <span class="built_in">return</span> (</div><div class="line">    &lt;button className=<span class="string">"square"</span> onClick=&#123;props.onClick&#125;&gt;</div><div class="line">    //记得把所有的 this.props 替换成参数 props. </div><div class="line">      &#123;props.value&#125;</div><div class="line">    &lt;/button&gt;</div><div class="line">  );</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ol>
 <li><p>引入两位带头大哥——react &amp; react-dom</p>
 <pre><code>切记import React from &apos;react&apos;中的react开头字母一定是需要大写,ReactDom负责控制页面的内容,但是使用ReactDom 必须依赖React
@@ -383,6 +385,7 @@ this.state={
 <p>一般我们开始创建react应用程序的时候，要自己通过npm或者安装项目的全部依赖，再写webpack.config.js，一系列复杂的配置，搭建好开发环境后写src源代码<br>现在如果你正在搭建react运行环境，使用create-react-app去自动构建你的程序。你的项目所在的文件夹下是没有配置文件.react-scripts是唯一的额外的构造依赖</p>
 <p>在你的package.json中，你的运行环境将有每一个你需要用来构建一个现代应用程序应用程序你需要依赖，在配置文件中编写的配置代码，反应脚本都帮你写了，比如：react-scripts帮你自动下载需要的webpack-dev-server依赖，然后react脚本自己写了一个nodejs服务端的脚本代码start.js来实例化WebpackDevServer，并且运行启动了一个使用express的Http服务器，现在你只需要专心写SRC源代码就可以了。省去了很多精力，最适合快速上手一个演示了。</p>
 <p>[React-scripts有以下支持，都帮你配置好了：<br>React，JSX，ES6和Flow语法支持。<br>ES6之外的语言扩展像对象扩展运算符。<br>直接从JavaScript导入CSS和图像文件。<br>自动翻译CSS，所以你不需要-webkit或其他前缀。<br>一个构建脚本来捆绑JS，CSS，和图像进行生产，具有源代码图。</p>
+<p><a href="https://discountry.github.io/react/docs/hello-world.html" target="_blank" rel="external">react官方文档</a></p>
 
       
     </div>
@@ -397,6 +400,12 @@ this.state={
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/react/" rel="tag"># react</a>
+          
+        </div>
       
 
       
