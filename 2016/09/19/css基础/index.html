@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="CSS基础 1、css简介 cascading style sheets    汉译层叠样式表,WEB标准中的表现标准语言,表现标准语言在网页中主要对网页信息的显示进行控制，简单说就是如何修饰网页信息的显示样式。 目前推荐遵循的是W3C发布的CSS3.0. 用来表现XHTML或者XML等样式文件的计算机语言。 css1 发布于 1996年12月17 日。1999 年1月11日，此推荐被重新修订 c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css基础">
+<meta property="og:url" content="http://https://zhanglin6427.github.io/2016/09/19/css基础/index.html">
+<meta property="og:site_name" content="张琳的总结">
+<meta property="og:description" content="CSS基础 1、css简介 cascading style sheets    汉译层叠样式表,WEB标准中的表现标准语言,表现标准语言在网页中主要对网页信息的显示进行控制，简单说就是如何修饰网页信息的显示样式。 目前推荐遵循的是W3C发布的CSS3.0. 用来表现XHTML或者XML等样式文件的计算机语言。 css1 发布于 1996年12月17 日。1999 年1月11日，此推荐被重新修订 c">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-17T14:24:11.369Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css基础">
+<meta name="twitter:description" content="CSS基础 1、css简介 cascading style sheets    汉译层叠样式表,WEB标准中的表现标准语言,表现标准语言在网页中主要对网页信息的显示进行控制，简单说就是如何修饰网页信息的显示样式。 目前推荐遵循的是W3C发布的CSS3.0. 用来表现XHTML或者XML等样式文件的计算机语言。 css1 发布于 1996年12月17 日。1999 年1月11日，此推荐被重新修订 c">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://https://zhanglin6427.github.io/2016/09/19/css基础/"/>
+
+
+
+
+
+  <title>css基础 | 张琳的总结</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">张琳的总结</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://https://zhanglin6427.github.io/2016/09/19/css基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张琳">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张琳的总结">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">css基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-19T20:22:06+08:00">
+                2016-09-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>CSS基础</p>
+<p>1、css简介</p>
+<p>cascading style sheets    汉译层叠样式表,WEB标准中的表现标准语言,表现标准语言在网页中主要对网页信息的显示进行控制，简单说就是如何修饰网页信息的显示样式。</p>
+<p>目前推荐遵循的是W3C发布的CSS3.0.</p>
+<p>用来表现XHTML或者XML等样式文件的计算机语言。</p>
+<p>css1 发布于 1996年12月17 日。1999 年1月11日，此推荐被重新修订</p>
+<p>css2.0 发布于1998年5月21日</p>
+<p>CSS 3 发布于2001 年 5 月 23 日 </p>
+<p>2、样式的建立:内部样式   外部样式  和内联样式</p>
+<p>内部样式  ：</p>
+<p>语法：</p>
+<style type="text/css">
+
+/*css语句*/
+
+</style>
+
+
+
+<p>注：使用style标记创建样式时，最好将该标记写在<head></head>;</p>
+<p>3、CSS语法</p>
+<p>选择符{属性：属性值；属性：属性值；}</p>
+<p>div{color:red;font-size:30px;}</p>
+<p>属性=”属性值”</p>
+<p>说明：</p>
+<p>1）每个CSS样式由两部分组成，即选择符和声明，声明又分为属性和属性值；</p>
+<p>2）属性必须放在花括号中，属性与属性值用冒号连接。</p>
+<p>3）每条声明用分号结束。</p>
+<p>4）当一个属性有多个属性值的时候，属性值与属性值不分先后顺序。</p>
+<p>5）在书写样式过程中，空格、换行等操作不影响属性显示。</p>
+<p>4、外部样式的建立及调用</p>
+<p>a:外部样式表的创建.</p>
+<p>b:外部样式表的导入</p>
+<p>*方法 一</p>
+<link rel="stylesheet" type="text/css" href="目标文件的路径及文件名全称">
+
+<p>说明：使用link元素导入外部样式表时，需将该元素写在文档头部，即<head>与</head>之间。</p>
+<p>rel 属性规定当前文档与被链接文档之间的关系</p>
+<p>拓展：</p>
+<p>*方法二</p>
+<style type="text/css">
+
+@import url(目标文件的路径及文件名全称);
+
+</style>
+
+<p>注：@和import之间没有空格 url和小括号之间也没有空格；必须结尾以分号结束；</p>
+<p>*link和import导入外部样式的区别：</p>
+<p>差别1：老祖宗的差别：link属于XHTML标签，而@import完全是CSS提供的一种方式。 link标签除了可以加载CSS外，还可以做很多其它的事情，比如定义RSS，定义rel连接属性等，@import就只能加载CSS。</p>
+<p>差别2：加载顺序的差别：当一个页面被加载的时候（就是被浏览者浏览的时候），link引用的CSS会同时被加载，而@import引用的CSS 会等到页面全部被下载完再被加载。所以有时候浏览@import加载CSS的页面时开始会没有样式。</p>
+<p>差别3：兼容性的差别。：@import是CSS2.1提出的，所以老的浏览器不支持，@import只t在IE5以上的才能识别，而link标签无此问题。</p>
+<p>差别4：使用dom控制样式时的差别：当使用javascript控制dom去改变样式的时候，只能使用link标签，因为@import不是dom可以控制的.</p>
+<p>3) 内联样式表（行间样式，行内样式，嵌入式样式）</p>
+<p>语法：&lt;标签    style=”属性：属性值;属性:属性值;”&gt;&lt;/标签&gt;</p>
+<p>4、样式表的优先级</p>
+<p>内联样式表的优先级别最高<br>内部样式表与外部样式表的优先级和书写的顺序有关，后书写的优先级别高。</p>
+<ol>
+<li><p>3种样式表的引入</p>
+</li>
+<li><p>常用选择器</p>
+</li>
+</ol>
+<p>5、CSS选择符（选择器）</p>
+<p>选择符表示要定义样式的对象，可以是元素本身，也可以是一类元素或者制定名称的元素.</p>
+<p>常用的选择符有十种左右</p>
+<p>类型选择符，id选择符，class选择符，通配符，群组选择符，</p>
+<p>包含选择符，伪类选择符，伪对象选择符。</p>
+<p>1） 元素选择符/类型选择符（element选择器    )</p>
+<p>语法：元素名称{属性：属性值；}</p>
+<p>div{color:red;}</p>
+<p>说明：</p>
+<p>a)元素选择符就是以文档语言对象类型作为选择符，即使用结构中元素名称作为选择符。例如html,body、div、p,img,em,strong,span……等。</p>
+<p>b)所有的页面元素都可以作为选择符;</p>
+<p>用法：</p>
+<p>1)如果想改变某个元素得默认样式时，可以使用类型选择符；</p>
+<p>2) 当统一文档某个元素的显示效果时，可以使用类型选择符；</p>
+<p>2) id选择器</p>
+<p>语法：#id名{属性：属性值;}</p>
+<p>说明：</p>
+<p>1）当我们使用id选择符时，应该为每个元素定义一个id属性，</p>
+<p>如：<div id="header"></div></p>
+<p>2）id选择符的语法格式是“#”加上自定义的id名</p>
+<p>如：#header{width:300px; height:300px;}</p>
+<p>3)  起名时要取英文名，不能用关键字：(所有的标记和属性都是关键字)</p>
+<p>如：head标记 </p>
+<p>4）一个id名称只能对应文档中一个具体的元素对象，因为id只能定义页面中某一个唯一的元素对象。</p>
+<p>5)   最大的用处：创建网页的外围结构。</p>
+<p>3）class选择器</p>
+<p>.class名{属性：属性值}</p>
+<p>语法：.top{属性：属性值;}</p>
+<p>说明：</p>
+<p>1）当我们使用类选择符时，应先为每个元素定义一个类名称，</p>
+<p>2）类选择符的语法格式是：”如：<div class="top"></div>“</p>
+<p>用法：class选择符更适合定义一类样式；</p>
+<p>4)*通配符</p>
+<p>语法：*{属性：属性值；}</p>
+<p>说明：通配选择符的写法是“*”，其含义就是所有元素。<br>用法：常用来重置样式。</p>
+<p>5）群组选择器</p>
+<p>语法：选择符1，选择符2，选择符3{属性：属性值;}</p>
+<p>说明：当有多个选择符应用相同的样式时，可以将选择符用“，”分隔的方式，合并为一组。</p>
+<p><em>**</em>)块元素的居中：选择符{margin:0 auto;}</p>
+<p>6） 包含选择器</p>
+<p>语法：选择符1    选择符2 选择符3{属性：属性值;}</p>
+<p>说明：选择符1和选择符2用空格隔开，含义就是选择符1中包含的所有选择符2;</p>
+<p>7） 伪类选择器(伪类选择符)</p>
+<p>语法 ：</p>
+<p>a:link{属性：属性值;}超链接的初始状态;</p>
+<p>a:visited{属性：属性值;}超链接被访问后的状态;</p>
+<p>a:hover{属性：属性值;}鼠标悬停，即鼠标划过超链接时的状态;</p>
+<p>a:active{属性：属性值;}超链接被激活时的状态，即鼠标按下时超链接的状态;</p>
+<p>love /hate 爱恨原则顺序</p>
+<p>说明：<br>1）当这4个超链接伪类选择符联合使用时，应注意他们的顺序，正常顺序为：<br>a:link,a:visited,a:hover,a:active,错误的顺序有时会使超链接的样式失效；</p>
+<p>2）为了简化代码，可以把伪类选择符中相同的声明提出来放在a选择符中；</p>
+<p>例如：a{color:red;}     a:hover{color:green;} 表示超链接的三种状态都相同，只有鼠标划过变颜色。 </p>
+<p>二、选择符的权重</p>
+<p>css中用四位数字表示权重，权重的表达方式如：0，0，0，0</p>
+<p>类型选择符的权重为0001</p>
+<p>class选择符的权重为0010</p>
+<p>id选择符的权重为0100</p>
+<p>子选择符的权重为0000</p>
+<p>属性选择符的权重为0010</p>
+<p>伪类选择符的权重为0010</p>
+<p>伪元素选择符的权重为0010</p>
+<p>包含选择符的权重：为包含选择符的权重之和</p>
+<p>内联样式的权重为1000</p>
+<p>继承样式的权重为0000</p>
+<p>六、html的注释</p>
+<!--******注释内容++++++++++====-->
+<p>css的注释</p>
+<p>/<em>—————–注释内容——————–</em>/</p>
+<p>拓展：</p>
+<p>rss</p>
+<p>简易信息聚合（也叫聚合内容）是一种RSS基于XML标准，在互联网上被广泛采用的内容包装和投递协议</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/17/html基础/" rel="next" title="html基础">
+                <i class="fa fa-chevron-left"></i> html基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/12/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="张琳" />
+          <p class="site-author-name" itemprop="name">张琳</p>
+           
+              <p class="site-description motion-element" itemprop="description">前端学习总结</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">张琳</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
