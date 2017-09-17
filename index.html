@@ -814,6 +814,330 @@ this.state={
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://https://zhanglin6427.github.io/2016/09/17/html基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张琳">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张琳的总结">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/09/17/html基础/" itemprop="url">html基础</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-17T22:16:43+08:00">
+                2016-09-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1、 HTML+CSS 标记语言</p>
+<p>一、 WEB标准的概念及组成</p>
+<p>IETF:互联网工程任务组，成立于1985年底，是全球互联网最具权威的技术标准化组织，主要任务是负责互联网相关技术规范的研发和制定，当</p>
+<p>前绝大多数国际互联网技术标准出自IETF。</p>
+<p>ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。</p>
+<p>W3C制定的结构和表现的标准</p>
+<p>结构：(xhtml ,xml)</p>
+<p>表现：(css)</p>
+<p>ECMA制定的行为的标准;</p>
+<p>行为 （DOM ,ECMASCRIPT）</p>
+<p>结构和表现标准：</p>
+<p>（1）W3C( World Wide Web Consortium )万维网联盟，创建于1994年是Web技术领域最具权威和影响力的国际中立性技术标准机构。(制定了结构和表现的标准，非赢利性的。)</p>
+<p>（2）行为标准：DOM，ECMASCRIPT（ECMA制定的）欧洲电脑场商联合会。</p>
+<p>三、 调试工具 -浏览器</p>
+<p>1）PC端调试工具的使用 -浏览器</p>
+<pre><code>测试浏览器(chrome,ie,firefox)
+</code></pre><p>2）移动端调试工具chrome可以测试移动端页面（有很多模拟器）</p>
+<p>四、 HTML及相关概念的介绍</p>
+<pre><code>HTML 指的是超文本标记语言 (Hyper Text Markup Language)
+
+XHTML指可扩展超文本标记语言（标识语言）（EXtensible HyperText Markup Language）。
+
+HTML5指的是HTML的第五次重大修改（第5个版本）
+</code></pre><p>  (HTML5 是 W3C 与 WHATWG 合作的结果)</p>
+<p>WHATWG网页超文本应用技术工作小组是一个以推动网络HTML 5 标准为目的而成立的组织。在2004年，由Opera、Mozilla基金会和苹果这些浏览器厂商组成。</p>
+<p>五、HTML5 基本结构 （新建一个html文件时默认有那些代码）</p>
+<p>&lt;!DOCTYPE html&gt;命名文档类型</p>
+<p><html></html>说明我们写的是标记语言</p>
+<p><head></head>文件头部</p>
+<p><title></title>文件标题（显示在状态栏上的内容）</p>
+<p><meta charset="utf-8">编码格式</p>
+<p><body></body>文件主体(所有要写的内容)</p>
+<p>文件命名规则：用英文，不用中文</p>
+<p>名称全部用小写英文字母、数字、下划线的组合，其中不得包含汉字、空格和特殊字符；必须以英文字母开头。</p>
+<p>六、 HTML基本语法</p>
+<p>1、&lt;常规标记&gt;</p>
+<pre><code>&lt;标记  属性1=“属性值”   属性2=“属性值”&gt;&lt;/标记&gt;
+</code></pre><h1 algin="center"></h1>
+
+<p>2.空标记</p>
+<pre><code>&lt;标记 属性=“属性值”  /&gt;
+</code></pre><meta charset="utf-8">
+
+<p>说明：</p>
+<p>1.写在&lt;&gt;中的第一个单词叫做标记，标签，元素。</p>
+<p>2.标记和属性用空格隔开，属性和属性值用等号连接，属性值必须放在””号内。</p>
+<p>3.一个标记可以没有属性也可以有多个属性，属性和属性之间不分先后顺序。</p>
+<p>4.空标记没有结束标签，用“/”代替。</p>
+<p>七、 XHTML常用标记</p>
+<p>1）文本标题（h1-h6） heading </p>
+<h1>一级标题</h1>
+
+<h2>二级标题</h2>
+
+<p>…</p>
+<h6>六级标题</h6>
+
+
+
+<p>八、正文有两种形式（段落文本和文字列表）</p>
+<p>段落(p)</p>
+<p>2）</p>
+<p>paragraph</p>
+<p>段落文本内容</p>
+
+<p>标识一个段落(段落与段落之间有段间距)</p>
+<p>3）空格 ( )</p>
+<p>&nbsp;（所占位置没有一个确定的值,这与当前字体字号都有关系.浏览器</p>
+<p>4） 换行(br)</p>
+<p><br></p>
+<p>换行是一个空标记(强制换行)</p>
+<p>5）加粗</p>
+<p>加粗有两个标记</p>
+<p>1.<b>加粗内容</b></p>
+<p>2.<strong>加粗内容</strong></p>
+<p>b标签只负责样式的改变 strong更有强调的意思，比较有语义化</p>
+<p>b物理标签 strong 逻辑标签</p>
+<p>6）倾斜</p>
+<p>倾斜标记</p>
+<p>1.<i></i></p>
+<p>2<em></em></p>
+<p>7）水平线</p>
+<p>主题分割线 <hr>空标记 语义化，表示上下内容不是同个主题</p>
+<p>8）列表(ul,ol,dl)</p>
+<p>HTML中有三种列表，分别是：无序列表，有序列表，自定义列表</p>
+<p>*无序列表</p>
+<p>无序列表组成：</p>
+<ul><br><br><li></li><br><br><li></li><br><br><li></li><br><br>．．．．．．<br><br></ul>
+
+
+
+<p>*有序列表</p>
+<p>有序列表组成：</p>
+<ol><br><br><li></li><br><br><li></li><br><br><li></li><br><br>．．．．．．<br><br></ol>
+
+
+
+
+
+<p>*自定义列表</p>
+<dl><br><br>     <dt>名词</dt><br><br>     <dd>解释</dd><br><br>．．．．．．<br><br></dl>
+
+
+
+<p>9）插入图片</p>
+<p><img src="目标文件路径及全称" alt="图片替换文本" title="图片标题"></p>
+<p>注:所要插入的的图片必须放在站点下</p>
+<p>title的作用: 在你鼠标悬停在该图片上时显示一个小提示，鼠标离开就没有了，HTML的绝大多数标签都支持title属性，title属性就是专门做提示信息的</p>
+<p>alt的作用:alt属性是在你的图片因为某种原因不能加载时在页面显示的提示信息，它会直接输出在原本加载图片的地方。</p>
+<p>*相对路径的写法：</p>
+<p>1)当当前文件与目标文件在同一目录下，直接书写目标文件文件名+扩展名；</p>
+<p>1.jpg</p>
+<p>2)当当前文件与目标文件所处的文件夹在同一目录下，写法如下：</p>
+<p>文件夹名/目标文件全称+扩展名；</p>
+<p>img/1.jpg</p>
+<p>3)当当前文件所处的文件夹和目标文件所处的文件夹在同一目录下，写法如下：</p>
+<p>../目标文件所处文件夹名/目标文件文件名+扩展名；</p>
+<p>../images/child2.jpg</p>
+<p>10）超链接的应用</p>
+<p>语法：</p>
+<p><a href="目标文件路径及全称/连接地址" title="提示文本" target="_blank">链接文本/图片</a></p>
+<p><a href="#"></a>空链接 链接到当前页面</p>
+<p>属性：target:页面打开方式</p>
+<p>属性值：_blank 新窗口打开</p>
+<p><a href="#" target="_blank">新页面打开</a></p>
+<p>11） 数据表格的作用及组成</p>
+<pre><code>作用：显示数据
+</code></pre><table width="value/值" height="value" border="value" bgcolor="value" cellspacing="value" cellpadding="value">
+
+<tr>
+
+<pre><code> &lt;td&gt;&lt;/td&gt;
+
+&lt;td&gt;&lt;/td&gt;
+</code></pre><p></p></tr></table>注：个tr表示一行;一个td表示一列(一个单元格)<p></p>
+<p>table—–tr—-td</p>
+<p>*数据表格的相关属性</p>
+<p>1）width=”表格的宽度”</p>
+<p>2）height=”表格的高度”</p>
+<p>3）border=”表格的边框”</p>
+<p>4）bgcolor=”表格的背景色”</p>
+<p>5）cellspacing=”单元格与单元格之间的间距”</p>
+<p>6）cellpadding=”单元格与内容之间的空隙”</p>
+<p>7）对齐方式：align=”left/center/right”;</p>
+<p>8)合并单元格属性： 跨列</p>
+<p>colspan=“所要合并的单元格的列数”合并列;</p>
+<p>一行<br>一行    一行</p>
+<p>rowspan=“所要合并单元格的行数”合并行;</p>
+<p>一行    一行<br>一行</p>
+<p>该属性给td添加</p>
+<p>12） 表单的应用</p>
+<p>表单的作用：用来收集用户的信息的;</p>
+<p>1、表单框</p>
+<form><br><br></form>
+
+<p>1）文本框</p>
+<input type="text" value="默认值">
+
+
+
+<p>2)密码框</p>
+<input type="password" placeholder="密码">
+
+<p>3)提交按钮</p>
+<input type="submit" value="按钮内容">
+
+<p>4)重置按钮</p>
+<input type="reset" value="按钮内容">
+
+<p>5）单选框/单选按钮</p>
+<input type="radio" name="ral">
+
+<p><input type="radio" name="ral" checked="checked">(默认选中；)</p>
+<p>6）复选框</p>
+<input type="checkbox" name="like">
+
+<p><input type="checkbox" name="like" disabled="disabled"> (disabled=”disabled” :禁用)</p>
+<p>(checked=”checked” :默认选中)</p>
+<p>7)下拉菜单</p>
+<select name=""><br><br>         <option selected="selected">菜单内容</option><br><br></select>
+
+
+
+
+
+<p>8）多行文本框（文本域）</p>
+<textarea name="textareal" cols="字符宽度" rows="行数"><br><br></textarea>
+
+<p>9)按钮</p>
+<input name="'" type="button" value="“按钮内容”">
+
+<p>（他和submit的区别是 ，submit是提交按钮 起到提交信息的作用，button只起到跳转的作用，不进行提交。）</p>
+<p>13）div的用法</p>
+<div id="id名" class="class名"></div>
+
+<p>文档区域，文档布局对象 盒子</p>
+<p>14） span的用法</p>
+<p><span></span>文本节点（某一小段文本，或是某一个字）</p>
+<p>组合文字的盒子</p>
+<p>拓展：</p>
+<p>一是国家顶级域名 如中国是cn，美国是us，日本是jp等；</p>
+<p>国内标准根据申请机构主要分类</p>
+<p>ac — 科研机构<br>com — Commercial organizations， 工、商、金融等企业<br>edu — Educational institutions 教育机构<br>gov — Governmental entities政府部门<br>mil — Military ，军事机构<br>org — Other organizations，各种非盈利性的组织 <a href="http://www.apache.org/" target="_blank" rel="external">http://www.apache.org/</a></p>
+<p>net — Network operations and service centers， 互联网络、接入网络的信息中心（NIC)和运行中心（NOC)</p>
+<p>一、什么是可扩展标记语言？ xml<br>可扩展标记语言是一种很像超文本标记语言的标记语言。<br>它的设计宗旨是传输数据，而不是显示数据。<br>它的标签没有被预定义。您需要自行定义标签。<br>它被设计为具有自我描述性。<br>它是W3C的推荐标准。<br>二、可扩展标记语言和超文本标记语言之间的差异<br>它不是超文本标记语言的替代。<br>它是对超文本标记语言的补充。<br>它和超文本标记语言为不同的目的而设计：<br>它被设计用来传输和存储数据，其焦点是数据的内容。<br>超文本标记语言被设计用来显示数据，其焦点是数据的外观。<br>超文本标记语言旨在显示信息，而它旨在传输信息。<br>对它最好的描述是：它是独立于软件和硬件的信息传输工具。<br>严格 松散</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -860,7 +1184,7 @@ this.state={
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
